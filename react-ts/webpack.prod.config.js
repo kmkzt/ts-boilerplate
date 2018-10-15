@@ -12,6 +12,15 @@ const config = {
     libraryTarget: "umd"
   },
 
+  // 依存ライブラリの設定(使用先で必要なライブラリ)
+  externals: {
+    'react': 'react',
+    'styled-components': 'styled-components',
+    'react-redux': 'react-redux',
+    'react-router-dom': 'react-router-dom',
+    'react-css-modules': 'react-css-modules'
+  },
+
   optimization: {
     minimizer: [
       new UglifyJsPlugin({
