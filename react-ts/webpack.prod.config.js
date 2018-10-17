@@ -1,5 +1,6 @@
 const { join, resolve } = require('path')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const Dotenv = require('dotenv-webpack')
 
 const config = {
   entry: resolve('src', 'library.tsx'),
@@ -20,7 +21,12 @@ const config = {
     'react-router-dom': 'react-router-dom',
     'react-css-modules': 'react-css-modules'
   },
-
+  plugins: [
+    new Dotenv({
+      path: 'production.env',
+      safe: false
+    })
+  ],
   optimization: {
     minimizer: [
       new UglifyJsPlugin({

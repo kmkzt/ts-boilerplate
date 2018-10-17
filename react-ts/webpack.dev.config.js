@@ -1,5 +1,6 @@
 const { join, resolve } = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const Dotenv = require('dotenv-webpack')
 
 const config = {
   entry: resolve('src', 'index.tsx'),
@@ -11,6 +12,10 @@ const config = {
   },
 
   plugins: [
+    new Dotenv({
+      path: 'production.env',
+      safe: false
+    }),
     new HtmlWebpackPlugin({
       template: resolve('template.html'),
     })

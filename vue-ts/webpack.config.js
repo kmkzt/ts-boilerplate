@@ -1,12 +1,9 @@
 
 var {resolve } = require('path')
-const Dotenv = require('dotenv-webpack')
 const { smart } = require('webpack-merge');
-
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const devMode = process.env.NODE_ENV === 'development'
 const config = devMode ? require('./webpack.dev.config') : require('./webpack.prod.config');
-
 
 const common = {
   module: {
@@ -57,13 +54,7 @@ const common = {
       '@': resolve(__dirname, 'src'),
     }
   },
-  plugins: [
-    new VueLoaderPlugin(),
-    new Dotenv({
-      path: 'development.env',
-      safe: false
-    })
-  ]
+  plugins: [ new VueLoaderPlugin() ]
 }
 
 module.exports = smart(common, config);
