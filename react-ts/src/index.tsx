@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Counter } from '@/components/atoms/Counter'
+import { Counter } from '@/components/Counter'
 
 
 export class App extends React.Component {
