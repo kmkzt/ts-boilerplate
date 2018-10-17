@@ -2,9 +2,9 @@ import * as React from 'react'
 
 export interface Props {
   count: number
-  counterIncrement: () => void
-  counterDecrement: () => void
-  counterReset: () => void
+  counterIncrement?: () => void
+  counterDecrement?: () => void
+  counterReset?: () => void
 }
 
 export class Counter extends React.Component<Props> {

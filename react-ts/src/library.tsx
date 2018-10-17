@@ -1,1 +1,1 @@
-export { Props, Counter } from '@/components/atoms/Counter'
+export { Props, Counter } from '@/components/Counter'
