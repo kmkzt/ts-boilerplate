@@ -1,5 +1,6 @@
 const { join, resolve } = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const Dotenv = require('dotenv-webpack')
 
 const config = {
   mode: 'development',
@@ -10,6 +11,10 @@ const config = {
   },
   devtool: 'source-map',
   plugins: [
+    new Dotenv({
+      path: 'development.env',
+      safe: false
+    }),
     new HtmlWebpackPlugin({
       template: resolve('template.html'),
     })
