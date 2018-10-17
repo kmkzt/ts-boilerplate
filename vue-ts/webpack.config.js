@@ -1,5 +1,5 @@
 
-var {resolve } = require('path')
+const {resolve } = require('path')
 const { smart } = require('webpack-merge');
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const devMode = process.env.NODE_ENV === 'development'
