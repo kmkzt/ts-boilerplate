@@ -1,22 +1,20 @@
 
 var {resolve } = require('path')
-var webpack = require('webpack')
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
-// const devMode = process.env.NODE_ENV === 'development'
+const Dotenv = require('dotenv-webpack')
+const { smart } = require('webpack-merge');
 
-module.exports = {
-  entry: './src/index.ts',
-  output: {
-    path: resolve(__dirname, './lib'),
-    publicPath: '/lib/',
-    filename: 'index.min.js',
-  },
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const devMode = process.env.NODE_ENV === 'development'
+const config = devMode ? require('./webpack.dev.config') : require('./webpack.prod.config');
+
+
+const common = {
   module: {
     rules: [
       {
         test: /\.vue$/,
         exclude: /node_modules/,
-        use: [{ 
+        use: [{
           loader: 'vue-loader',
           options: {
             loaders: {
@@ -48,7 +46,8 @@ module.exports = {
             name: '[name].[ext]?[hash]'
           }
         }]
-      }
+      },
+      { test: /\.html$/, use: "html-loader" }
     ]
   },
   resolve: {
@@ -58,37 +57,13 @@ module.exports = {
       '@': resolve(__dirname, 'src'),
     }
   },
-
-  // devServer: {
-  //   historyApiFallback: true,
-  //   noInfo: true
-  // },
-  // performance: {
-  //   hints: false
-  // },
   plugins: [
-    new VueLoaderPlugin()
-  ],
-  devtool: '#eval-source-map'
+    new VueLoaderPlugin(),
+    new Dotenv({
+      path: 'development.env',
+      safe: false
+    })
+  ]
 }
 
-if (process.env.NODE_ENV === 'production') {
-  module.exports.devtool = '#source-map'
-  // http://vue-loader.vuejs.org/en/workflow/production.html
-  module.exports.plugins = (module.exports.plugins || []).concat([
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: '"production"'
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-      compress: {
-        warnings: false
-      }
-    }),
-    new webpack.LoaderOptionsPlugin({
-      minimize: true
-    })
-  ])
-}
+module.exports = smart(common, config);

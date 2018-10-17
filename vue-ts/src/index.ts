@@ -1,4 +1,13 @@
 import Vue from "vue";
-import Hello from "./components/Hello.vue";
+import Hello from "@/components/Hello";
 
-let v = new Vue(Hello);
+const app = new Vue({
+  el: '#app',
+  template: `
+  <hello />
+  `,
+  data: {},
+  components: {
+    Hello
+  }
+})
