@@ -2,13 +2,13 @@ const { join, resolve } = require('path')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const config = {
-  entry: resolve('src', 'production.tsx'),
+  entry: resolve('src', 'library.tsx'),
   devtool: false,
 
   output: {
     filename: 'index.min.js',
     path: resolve('lib'),
-    library: "samplelibrary",
+    library: "samplelibrary-reactts",
     libraryTarget: "umd"
   },
 
