@@ -1,0 +1,30 @@
+{
+  "name": "vue-ts-library-boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development webpack-dev-server",
+    "build": "rm -r lib && NODE_ENV=production webpack -p",
+    "sample": "webpack-dev-server server.js"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "awesome-typescript-loader": "^5.2.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "babel-preset-es2015": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "dotenv-webpack": "^1.5.7",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "4.20.1",
+    "webpack-cli": "3.1.2",
+    "webpack-dev-server": "^3.1.9",
+    "webpack-merge": "^4.1.4"
+  }
+}
