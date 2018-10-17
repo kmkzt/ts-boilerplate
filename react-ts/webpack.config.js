@@ -1,7 +1,6 @@
 'use strict';
 
 const { join, resolve } = require('path')
-// const autoprefixer = require('autoprefixer')
 const Dotenv = require('dotenv-webpack')
 const { smart } = require('webpack-merge');
 
