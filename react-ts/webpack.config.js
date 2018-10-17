@@ -1,9 +1,7 @@
 'use strict';
 
 const { join, resolve } = require('path')
-const Dotenv = require('dotenv-webpack')
 const { smart } = require('webpack-merge');
-
 const devMode = process.env.NODE_ENV === 'development'
 const config = devMode ? require('./webpack.dev.config') : require('./webpack.prod.config');
 
@@ -32,15 +30,7 @@ const common = {
     alias: {
       '@': resolve(__dirname, 'src'),
     }
-  },
-
-  plugins: [
-    new Dotenv({
-      path: 'development.env',
-      safe: false
-    })
-  ]
-
+  }
 };
 
 module.exports = smart(common, config);

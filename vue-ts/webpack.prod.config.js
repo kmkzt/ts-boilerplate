@@ -1,5 +1,6 @@
 const { join, resolve } = require('path')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const Dotenv = require('dotenv-webpack')
 
 const config = {
   mode: 'production',
@@ -19,6 +20,12 @@ const config = {
     'vue-router': 'vue-router',
     'vuex': 'vuex'
   },
+  plugins: [
+    new Dotenv({
+      path: 'production.env',
+      safe: false
+    })
+  ]
   optimization: {
     minimizer: [
       new UglifyJsPlugin({
