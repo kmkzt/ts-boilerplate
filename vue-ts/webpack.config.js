@@ -2,6 +2,7 @@
 const {resolve } = require('path')
 const { smart } = require('webpack-merge');
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 const devMode = process.env.NODE_ENV === 'development'
 const config = devMode ? require('./webpack.dev.config') : require('./webpack.prod.config');
 
@@ -54,7 +55,13 @@ const common = {
       '@': resolve(__dirname, 'src'),
     }
   },
-  plugins: [ new VueLoaderPlugin() ]
+  plugins: [
+    new VueLoaderPlugin(),
+    new ForkTsCheckerWebpackPlugin({
+      tslint: true,
+      vue: true
+    })
+  ]
 }
 
 module.exports = smart(common, config);
