@@ -1,18 +1,31 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "outDir": "./built/",
+    "outDir": "public/",
     "sourceMap": true,
     "strict": true,
     "module": "es2015",
     "moduleResolution": "node",
     "target": "es5",
+    "lib": ["es2017", "dom"],
+    "suppressImplicitAnyIndexErrors": true,
+    "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "paths": {
       "@*": ["src*"],
     },
+    "typeRoots": [
+      "src/typings",
+      "node_modules/@types",
+      "node_modules/**/types"
+    ]
   },
   "include": [
     "./src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "scripts"
   ]
 }
