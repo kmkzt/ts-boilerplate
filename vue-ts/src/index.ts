@@ -1,5 +1,5 @@
-import Vue from "vue";
-import Hello from "@/components/Hello";
+import Vue from 'vue';
+import Hello from '@/components/Hello';
 
 const app = new Vue({
   el: '#app',
