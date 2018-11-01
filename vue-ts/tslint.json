@@ -17,6 +17,7 @@
     "no-empty-interface": false,
     "object-shorthand-properties-first": false,
     "object-literal-sort-keys": false,
+    "object-literal-key-quotes": false,
     "ordered-imports": false,
     "ter-arrow-parens": false,
     "semicolon": [true, "never"],
@@ -26,6 +27,7 @@
     "indent": [
       true
     ],
+    "trailing-comma": false,
     "arrow-parens": false
   }
 }
