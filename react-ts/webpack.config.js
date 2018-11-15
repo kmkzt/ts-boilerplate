@@ -10,9 +10,9 @@ const common = {
 
   module: {
     rules: [
-      { test: /\.ts|.tsx$/, exclude: /node_modules/, use: "awesome-typescript-loader" },
+      { test: /\.tsx?$/, exclude: /node_modules/, use: "awesome-typescript-loader" },
       {
-        test: /\.scss$/,
+        test: /\.s?css$/,
         exclude: /node_modules/,
         use: [
           'style-loader',
