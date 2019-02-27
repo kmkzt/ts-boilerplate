@@ -1,4 +1,4 @@
 # JS boilerplate
 - [ ] Typescript
-- [x] React Typescript
+- [ ] React Typescript()
 - [ ] Vue Typescript
