@@ -24,7 +24,7 @@
     "lint:fix": "prettier --write ./src/**/*.{ts,tsx}"
   },
   "devDependencies": {
-    "@types/enzyme": "3.1.14",
+    "@types/enzyme": "3.1.18",
     "@types/enzyme-adapter-react-16": "1.0.3",
     "@types/jest": "23.3.5",
     "@types/node": "10.12.1",
