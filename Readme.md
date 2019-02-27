@@ -1,4 +1,4 @@
-# webpackでライブラリをビルド
-
-- privateをfalseにする。
-- output部分でlibraryの設定をする。
+# JS boilerplate
+- [ ] Typescript
+- [x] React Typescript
+- [ ] Vue Typescript
