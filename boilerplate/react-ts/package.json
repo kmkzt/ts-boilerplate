@@ -36,7 +36,7 @@
     "@types/redux-logger": "3.0.6",
     "@types/styled-components": "4.0.3",
     "autoprefixer": "9.1.5",
-    "awesome-typescript-loader": "5.2.0",
+    "awesome-typescript-loader": "5.2.1",
     "css-loader": "1.0.0",
     "dotenv-webpack": "1.5.7",
     "enzyme": "3.7.0",
