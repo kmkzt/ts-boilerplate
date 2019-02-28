@@ -22,7 +22,7 @@
   "devDependencies": {
     "@types/jest": "23.3.14",
     "@vue/test-utils": "1.0.0-beta.25",
-    "awesome-typescript-loader": "5.2.0",
+    "awesome-typescript-loader": "5.2.1",
     "babel-jest": "23.6.0",
     "css-loader": "1.0.0",
     "dotenv-webpack": "1.5.7",
