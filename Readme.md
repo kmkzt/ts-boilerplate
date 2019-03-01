@@ -11,7 +11,7 @@ Javascript project start boilerplate.
 
 - [x] webpack
 - [ ] rollup
-- [ ] test(jest)
+- [x] test(jest)
 - [ ] storybook
 - [ ] ssr
 
