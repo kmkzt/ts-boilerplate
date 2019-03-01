@@ -4,7 +4,6 @@
 
 - [ ] webpack
 - [ ] rollup
-- [ ]
 
 ## React Typescript
 
