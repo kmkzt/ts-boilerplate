@@ -41,7 +41,7 @@
     "@types/redux-logger": "3.0.7",
     "@types/styled-components": "4.1.11",
     "@typescript-eslint/eslint-plugin": "1.4.2",
-    "@typescript-eslint/parser": "1.4.1",
+    "@typescript-eslint/parser": "1.4.2",
     "@typescript-eslint/typescript-estree": "1.4.2",
     "enzyme": "3.9.0",
     "enzyme-adapter-react-16": "1.10.0",
