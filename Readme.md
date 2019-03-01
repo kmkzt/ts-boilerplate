@@ -1,5 +1,7 @@
 # JS boilerplate
 
+Javascript project start boilerplate.
+
 ## Typescript
 
 - [ ] webpack
