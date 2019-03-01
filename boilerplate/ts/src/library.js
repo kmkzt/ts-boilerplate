@@ -1,5 +1,5 @@
-const sample = (id) => {
-  const ele = document.querySelector(id)
+const sample = query => {
+  const ele = document.querySelector(query)
   ele.innerHTML = new Date().toLocaleTimeString()
 }
 
