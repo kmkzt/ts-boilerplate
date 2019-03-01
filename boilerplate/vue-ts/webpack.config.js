@@ -1,10 +1,10 @@
-
-const {resolve } = require('path')
-const { smart } = require('webpack-merge');
+const { resolve } = require('path')
+const { smart } = require('webpack-merge')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 const devMode = process.env.NODE_ENV === 'development'
-const config = devMode ? require('./webpack.dev.config') : require('./webpack.prod.config');
+const config = devMode
+  ? require('./webpack.dev.config')
+  : require('./webpack.prod.config')
 
 const common = {
   module: {
@@ -12,56 +12,56 @@ const common = {
       {
         test: /\.vue$/,
         exclude: /node_modules/,
-        use: [{
-          loader: 'vue-loader',
-          options: {
-            loaders: {
-              // Since sass-loader (weirdly) has SCSS as its default parse mode, we map
-              // the "scss" and "sass" values for the lang attribute to the right configs here.
-              // other preprocessors should work out of the box, no loader config like this necessary.
-              'scss': 'vue-style-loader!css-loader!sass-loader',
-              'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax',
+        use: [
+          {
+            loader: 'vue-loader',
+            options: {
+              loaders: {
+                // Since sass-loader (weirdly) has SCSS as its default parse mode, we map
+                // the "scss" and "sass" values for the lang attribute to the right configs here.
+                // other preprocessors should work out of the box, no loader config like this necessary.
+                scss: 'vue-style-loader!css-loader!sass-loader',
+                sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
+              }
             }
+            // other vue-loader options go here
           }
-          // other vue-loader options go here
-        }]
+        ]
       },
       {
         test: /\.ts|.tsx$/,
         exclude: /node_modules/,
-        use: [{
-          loader: 'ts-loader',
-          options: {
-            appendTsSuffixTo: [/\.vue$/],
+        use: [
+          {
+            loader: 'ts-loader',
+            options: {
+              appendTsSuffixTo: [/\.vue$/]
+            }
           }
-        }]
+        ]
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]?[hash]'
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]?[hash]'
+            }
           }
-        }]
+        ]
       },
-      { test: /\.html$/, use: "html-loader" }
+      { test: /\.html$/, use: 'html-loader' }
     ]
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.vue', '.json'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.vue', '.json'],
     alias: {
-      'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve(__dirname, 'src'),
+      vue$: 'vue/dist/vue.esm.js',
+      '@': resolve(__dirname, 'src')
     }
   },
-  plugins: [
-    new VueLoaderPlugin(),
-    new ForkTsCheckerWebpackPlugin({
-      tslint: true,
-      vue: true
-    })
-  ]
+  plugins: [new VueLoaderPlugin()]
 }
 
-module.exports = smart(common, config);
+module.exports = smart(common, config)
