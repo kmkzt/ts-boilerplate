@@ -17,7 +17,7 @@ Javascript project start boilerplate.
 
 ## Vue Typescript
 
-- [x] lint
-- [x] test
+- [ ] lint
+- [ ] test
 - [ ] storybook
 - [ ] ssr
