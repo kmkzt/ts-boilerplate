@@ -1,31 +1,45 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "outDir": "public/",
-    "sourceMap": true,
-    "strict": true,
-    "module": "es2015",
-    "moduleResolution": "node",
+    "outDir": "./dist",
     "target": "es5",
-    "lib": ["es2017", "dom"],
+    "module": "esnext",
+    "lib": ["es2018", "es2017", "dom"],
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "react",
+    "moduleResolution": "node",
     "suppressImplicitAnyIndexErrors": true,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
+    "downlevelIteration": true,
+    "noEmit": true,
+    "noUnusedLocals": false,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin"
+      }
+    ],
     "paths": {
-      "@*": ["src*"],
+      "@*": ["src*"]
     },
     "typeRoots": [
-      "src/typings",
+      "../../node_modules/@types",
+      "../../node_modules/vue**/types",
       "node_modules/@types",
-      "node_modules/**/types"
+      "./types"
     ]
   },
-  "include": [
-    "./src/**/*"
-  ],
   "exclude": [
     "node_modules",
     "build",
-    "scripts"
+    "scripts",
+    "acceptance-tests",
+    "webpack",
+    "jest"
   ]
 }

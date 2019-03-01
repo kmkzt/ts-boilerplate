@@ -4,18 +4,20 @@ Javascript project start boilerplate.
 
 ## Typescript
 
-- [ ] test(jest)
+- [ ] lint
+- [x] test(jest)
 - [ ] storybook
 
 ## React Typescript
 
+- [x] lint
 - [x] test(jest)
 - [ ] storybook
 - [ ] ssr
 
 ## Vue Typescript
 
-- [x] webpack
-- [ ] rollup
+- [x] lint
+- [x] test
 - [ ] storybook
 - [ ] ssr

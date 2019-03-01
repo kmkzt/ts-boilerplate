@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hello.vue render 1`] = `
+<div
+  class="greeting"
+>
+  Hello World
+</div>
+`;
