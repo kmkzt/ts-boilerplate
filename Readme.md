@@ -4,13 +4,11 @@ Javascript project start boilerplate.
 
 ## Typescript
 
-- [ ] webpack
-- [ ] rollup
+- [ ] test(jest)
+- [ ] storybook
 
 ## React Typescript
 
-- [x] webpack
-- [ ] rollup
 - [x] test(jest)
 - [ ] storybook
 - [ ] ssr
