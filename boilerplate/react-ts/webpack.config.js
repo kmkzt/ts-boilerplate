@@ -1,16 +1,28 @@
-'use strict';
+'use strict'
 
-const { join, resolve } = require('path')
-const { smart } = require('webpack-merge');
+const { resolve } = require('path')
+const { smart } = require('webpack-merge')
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 const devMode = process.env.NODE_ENV === 'development'
-const config = devMode ? require('./webpack.dev.config') : require('./webpack.prod.config');
+const config = devMode
+  ? require('./webpack.dev.config')
+  : require('./webpack.prod.config')
 
 const common = {
   mode: devMode ? 'development' : 'production',
 
   module: {
     rules: [
-      { test: /\.tsx?$/, exclude: /node_modules/, use: "awesome-typescript-loader" },
+      {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'ts-loader',
+          options: {
+            transpileOnly: true
+          }
+        }
+      },
       {
         test: /\.s?css$/,
         exclude: /node_modules/,
@@ -21,16 +33,24 @@ const common = {
           'sass-loader'
         ]
       },
-      { test: /\.html$/, use: "html-loader" }
+      { test: /\.html$/, use: 'html-loader' }
     ]
   },
 
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".json"],
+    extensions: ['.ts', '.tsx', '.js', '.json'],
     alias: {
-      '@': resolve(__dirname, 'src'),
-    }
+      '@': resolve(__dirname, 'src')
+    },
+    plugins: [
+      new TsconfigPathsPlugin({
+        configFile: resolve(
+          __dirname,
+          devMode ? 'tsconfig.json' : 'tsconfig.prod.json'
+        )
+      })
+    ]
   }
-};
+}
 
-module.exports = smart(common, config);
+module.exports = smart(common, config)
