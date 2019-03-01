@@ -1,21 +1,14 @@
 module.exports = {
   transform: {
-    "^.+\\.(ts|tsx)$": "ts-jest"
+    '^.+\\.(ts|tsx)$': 'ts-jest'
   },
   testRegex: '(\\.|/)(test|spec)\\.tsx?$',
-  setupTestFrameworkScriptFile: '<rootDir>/setupTest.ts',
-  snapshotSerializers: ["enzyme-to-json/serializer"],
+  setupFilesAfterEnv: ['<rootDir>/setupTest.ts'],
+  snapshotSerializers: ['enzyme-to-json/serializer'],
   moduleNameMapper: {
-    "^@/(.*)": "<rootDir>/src/$1",
+    '^@/(.*)': '<rootDir>/src/$1'
   },
-  moduleFileExtensions: [
-    'ts',
-    'tsx',
-    'js',
-    'jsx',
-  ],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   collectCoverage: true,
-  collectCoverageFrom: [
-    'src/**/*.ts?(x)'
-  ]
-};
+  collectCoverageFrom: ['src/**/*.ts?(x)']
+}
