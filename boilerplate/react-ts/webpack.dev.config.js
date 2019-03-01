@@ -17,7 +17,7 @@ const config = {
       safe: false
     }),
     new HtmlWebpackPlugin({
-      template: resolve('template.html'),
+      template: resolve('template.html')
     })
   ],
 
@@ -25,7 +25,7 @@ const config = {
     contentBase: join(__dirname, 'public'),
     compress: true,
     port: 9000
-  },
-};
+  }
+}
 
 module.exports = config
