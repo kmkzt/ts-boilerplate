@@ -1,21 +1,21 @@
 const { join, resolve } = require('path')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const Dotenv = require('dotenv-webpack')
 
 const config = {
-  entry: resolve('src', 'library.tsx'),
+  entry: resolve(__dirname, 'src/library.tsx'),
   devtool: false,
 
   output: {
     filename: 'index.min.js',
     path: resolve('lib'),
-    library: "samplelibrary-reactts",
-    libraryTarget: "umd"
+    library: 'samplelibrary-reactts',
+    libraryTarget: 'umd'
   },
 
   // 依存ライブラリの設定(使用先で必要なライブラリ)
   externals: {
-    'react': 'react',
+    react: 'react',
     'styled-components': 'styled-components',
     'react-redux': 'react-redux',
     'react-router-dom': 'react-router-dom',
@@ -34,6 +34,6 @@ const config = {
       })
     ]
   }
-};
+}
 
 module.exports = config

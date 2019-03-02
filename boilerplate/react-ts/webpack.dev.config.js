@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const Dotenv = require('dotenv-webpack')
 
 const config = {
-  entry: resolve('src', 'index.tsx'),
+  entry: resolve(__dirname, 'src/index.tsx'),
   devtool: 'source-map',
 
   output: {

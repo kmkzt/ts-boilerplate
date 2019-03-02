@@ -19,11 +19,7 @@
     "strict": true,
     "strictNullChecks": true,
     "esModuleInterop": true,
-    "plugins": [
-      {
-        "name": "typescript-styled-plugin"
-      }
-    ],
+    "plugins": [],
     "paths": {
       "@*": ["src*"]
     },

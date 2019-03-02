@@ -4,7 +4,7 @@ const Dotenv = require('dotenv-webpack')
 
 const config = {
   mode: 'production',
-  entry: resolve('src', 'library.ts'),
+  entry: resolve(__dirname, 'src/library.ts'),
   output: {
     filename: 'index.min.js',
     path: resolve('lib'),
