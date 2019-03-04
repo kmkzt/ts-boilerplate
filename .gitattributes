@@ -1,2 +1,3 @@
 lib/* linguist-vendored
-*.{js, html} linguist-vendored
+*.js linguist-vendored
+*.html linguist-vendored
