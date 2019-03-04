@@ -1,23 +1,34 @@
-# JS boilerplate
+# TS boilerplate
 
-Javascript project start boilerplate.
+Typescript monorepo project start boilerplate.
 
-## Typescript
+## get started
 
-- [ ] lint
+```
+git clone https://github.com/kmkzt/ts-boilerplate myproject
+```
+
+## Packages
+
+### Typescript
+
+- [x] webpack
+- [x] lint
 - [x] test(jest)
 - [ ] storybook
 
-## React Typescript
+### React Typescript
 
+- [x] webpack
 - [x] lint
 - [x] test(jest)
 - [ ] storybook
 - [ ] ssr
 
-## Vue Typescript
+### Vue Typescript
 
+- [x] webpack
 - [ ] lint
-- [ ] test
+- [x] test
 - [ ] storybook
 - [ ] ssr
