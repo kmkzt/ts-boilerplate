@@ -13,7 +13,7 @@
   "dependencies": {
     "vue": "2.6.8",
     "vue-class-component": "7.0.1",
-    "vue-property-decorator": "7.3.0",
+    "vue-property-decorator": "8.0.0",
     "vue-router": "3.0.2",
     "vue-template-compiler": "2.6.8",
     "vuex": "3.0.1",
