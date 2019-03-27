@@ -26,8 +26,7 @@
     "dev": "NODE_ENV=development webpack-dev-server",
     "build": "rm -r lib && NODE_ENV=production webpack -p",
     "test": "jest",
-    "lint": "tslint --fix .src/**/*.{ts,tsx}",
-    "lint:config": "tslint-config-prettier-check ./tslint.json",
+    "lint": "eslint --fix \"./src/**/**.{ts,tsx}\"",
     "lint:fix": "prettier --write ./src/**/*.{ts,tsx}"
   },
   "devDependencies": {
