@@ -35,6 +35,7 @@ const common = {
           {
             loader: 'ts-loader',
             options: {
+              transpileOnly: true,
               appendTsSuffixTo: [/\.vue$/]
             }
           }
