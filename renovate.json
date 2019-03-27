@@ -35,7 +35,7 @@
       "packagePatterns": ["^apollo", "^@types/apollo"]
     },
     {
-      "groupName": "webpack/bable library",
+      "groupName": "webpack/babel library",
       "packagePatterns": ["^webpack", "^@babel"]
     },
     {
