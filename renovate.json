@@ -3,7 +3,6 @@
   "timezone": "Asia/Tokyo",
   "labels": ["renovate"],
   "automerge": true,
-  "patch": { "automerge": true },
   "major": {
     "automerge": false
   },
