@@ -1,10 +1,10 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import * as React from 'react'
+import * as ReactDOM from 'react-dom'
 import { Counter } from '@/components/Counter'
 
-
-export class App extends React.Component {
-  constructor(props: any) {
+interface Props {}
+export class App extends React.Component<Props, {}> {
+  constructor(props: Props) {
     super(props)
   }
 
@@ -29,7 +29,7 @@ export class App extends React.Component {
     })
   }
 
-  public render() {
+  public render(): JSX.Element {
     const { count } = this.state
     return (
       <Counter
@@ -42,7 +42,4 @@ export class App extends React.Component {
   }
 }
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root') as HTMLElement
-);
+ReactDOM.render(<App />, document.getElementById('root') as HTMLElement)

@@ -11,7 +11,7 @@ export class Counter extends React.Component<Props> {
   constructor(props: Props) {
     super(props)
   }
-  public render() {
+  public render(): JSX.Element {
     const {
       count,
       counterIncrement,

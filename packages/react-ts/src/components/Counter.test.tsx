@@ -6,7 +6,7 @@ import { Counter } from './Counter'
 
 describe('Counter コンポーネント', () => {
   it('render', () => {
-    const tree = mount(<Counter count={0} />);
+    const tree = mount(<Counter count={0} />)
     expect(toJson(tree)).toMatchSnapshot()
-  });
-});
+  })
+})
