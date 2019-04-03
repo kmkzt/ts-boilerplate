@@ -13,7 +13,7 @@ git clone https://github.com/kmkzt/ts-boilerplate myproject
 ### Typescript
 
 - [x] webpack
-- [x] lint
+- [ ] lint
 - [x] test(jest)
 - [ ] storybook
 
